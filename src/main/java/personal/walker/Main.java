@@ -1,9 +1,7 @@
 package personal.walker;
 
-import personal.walker.a.notes.LC1631;
-import personal.walker.dfs.LC1254;
-import personal.walker.dp.LC2054;
-import personal.walker.dp.linear.LC1027;
+import personal.walker.bit.operation.LC476;
+import personal.walker.dfs.LC1192;
 
 import java.util.*;
 
@@ -18,7 +16,7 @@ public class Main {
 //
        // System.out.println(Integer.parseInt("09",10));;
 
-        Solution lc = new LC2054();
+        Solution lc = new LC1192();
         lc.runTestCases();
      }
 

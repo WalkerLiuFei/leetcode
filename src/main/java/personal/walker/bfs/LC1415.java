@@ -1,4 +1,4 @@
-package personal.walker.dijkstra;
+package personal.walker.bfs;
 
 import personal.walker.Solution;
 

@@ -1,4 +1,4 @@
-package personal.walker.dp;
+package personal.walker.a.notes;
 
 import personal.walker.Solution;
 import personal.walker.Util;

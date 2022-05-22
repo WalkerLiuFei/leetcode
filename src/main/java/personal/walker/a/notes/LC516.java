@@ -18,7 +18,7 @@ public class LC516 implements Solution {
      * dp[i][j] = dp[0][1] = 0
      *
      * if s[i] == s[j] then  dp[i][j] = dp[i+1][j-1] + 2
-     * else s[i] != [sj] then dp[i][j] = max(dp[i][j-1],dp[i+1][j])
+     * else s[i] != s[j] then dp[i][j] = max(dp[i][j-1],dp[i+1][j])
      *
      * @param s
      * @return

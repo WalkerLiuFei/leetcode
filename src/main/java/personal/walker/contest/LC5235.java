@@ -1,6 +1,5 @@
 package personal.walker.contest;
 
-import com.sun.imageio.stream.CloseableDisposerRecord;
 import personal.walker.Solution;
 
 import java.util.*;

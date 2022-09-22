@@ -1,22 +1,17 @@
 package personal.walker;
 
-import personal.walker.a.notes.LC287;
-import personal.walker.union.find.LC990;
+import personal.walker.array.LC2007;
+import personal.walker.array.LC763;
+import personal.walker.contest.*;
+import personal.walker.dp.LC1035;
+import personal.walker.dp.LC1749;
+import personal.walker.heap.priority.queue.LC2406;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-//        Sum_4 sum_4 = new Sum_4();
-//        int[] nums = new int[]{43,12};
-//        sum_4.sort(nums,0,nums.length);
-//        Arrays.stream(nums).forEach(System.out::println);
-//        LC179 largestNumber = new LC179();
-//        largestNumber.runTestCases();
-//
-       // System.out.println(Integer.parseInt("09",10));;
-
-        Solution lc = new LC990();
+        Solution lc = new LC1035();
         lc.runTestCases();
      }
 

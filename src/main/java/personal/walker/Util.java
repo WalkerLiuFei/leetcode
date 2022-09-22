@@ -5,7 +5,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Util {
@@ -50,5 +49,10 @@ public class Util {
         Type listType = new TypeToken<ArrayList<ArrayList<Integer>>>(){}.getType();
         List<Integer> yourClassList = new Gson().fromJson(data, listType);
         return yourClassList;
+    }
+
+    public static void printResult(Object object){
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(object));;
     }
 }

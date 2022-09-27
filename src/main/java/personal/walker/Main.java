@@ -1,17 +1,16 @@
 package personal.walker;
 
-import personal.walker.array.LC2007;
-import personal.walker.array.LC763;
-import personal.walker.contest.*;
-import personal.walker.dp.LC1035;
-import personal.walker.dp.LC1749;
-import personal.walker.heap.priority.queue.LC2406;
+import personal.walker.a.notes.LC1680;
+import personal.walker.a.notes.LC287;
+import personal.walker.array.LC838;
+import personal.walker.contest.LC6189;
+import personal.walker.contest.LC6190;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Solution lc = new LC1035();
+        Solution lc = new LC838();
         lc.runTestCases();
      }
 

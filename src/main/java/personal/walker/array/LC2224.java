@@ -1,9 +1,8 @@
-package personal.walker.contest;
+package personal.walker.array;
 
 import personal.walker.Solution;
 
-public class LC6055 implements Solution {
-    // 简单的DP问题
+public class LC2224 implements Solution {
     public int convertTime(String current, String correct) {
         String[] parts1 = current.split(":");
         Integer currentMinutes = Integer.parseInt(parts1[0].trim()) * 60 +  Integer.parseInt(parts1[1].trim());

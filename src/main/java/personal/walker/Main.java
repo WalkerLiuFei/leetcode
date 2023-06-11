@@ -2,30 +2,32 @@ package personal.walker;
 
 import org.apache.commons.codec.Charsets;
 import org.apache.commons.codec.DecoderException;
-import org.apache.commons.codec.binary.Hex;
+import personal.walker.array.LC6396;
+import personal.walker.array.LC6430;
+import personal.walker.dijktra.LC6343;
+import personal.walker.dp.LC6449;
+import personal.walker.matrix.LC6472;
+import personal.walker.sliding.window.LC6329;
+import personal.walker.sliding.window.LC6390;
+import personal.walker.sliding.window.LC6425;
+import personal.walker.string.LC6461;
+import personal.walker.union.find.LC6432;
 
-import personal.walker.contest.*;
-import personal.walker.dp.LC1143;
-
-import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-import java.security.Security;
 import java.security.spec.InvalidKeySpecException;
-import java.security.spec.PKCS8EncodedKeySpec;
 
 
 public class Main {
 
     public static void main(String[] args) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchProviderException, DecoderException, UnsupportedEncodingException {
-        Solution lc = new LC6293();
+        Solution lc = new LC6449();
         lc.runTestCases();
     }
 
@@ -71,17 +73,17 @@ public class Main {
 
 
         System.out.println(N6.sqrt());
-      //  BigDecimal A = new BigDecimal("131459097554853198553643931189503735393893056560069574180596541504763272468756930205814940702782861638634577575123494197548004455659194920733082975077403789");
-        BigInteger a  = N6.subtract(BigInteger.ONE).sqrt().add(BigInteger.ONE);
+        //  BigDecimal A = new BigDecimal("131459097554853198553643931189503735393893056560069574180596541504763272468756930205814940702782861638634577575123494197548004455659194920733082975077403789");
+        BigInteger a = N6.subtract(BigInteger.ONE).sqrt().add(BigInteger.ONE);
         while (true) {
             a = a.add(BigInteger.ONE);
             BigInteger x = a.multiply(a).subtract(N6).sqrt();
             BigInteger q = a.subtract(x);
 
-            if (N.mod(q.divide(BigInteger.valueOf(4))).compareTo(BigInteger.ZERO) == 0){
+            if (N.mod(q.divide(BigInteger.valueOf(4))).compareTo(BigInteger.ZERO) == 0) {
                 System.out.println(q);
             }
-            if (N.mod(q.divide(BigInteger.valueOf(6))).compareTo(BigInteger.ZERO) == 0){
+            if (N.mod(q.divide(BigInteger.valueOf(6))).compareTo(BigInteger.ZERO) == 0) {
                 System.out.println(q);
             }
         }

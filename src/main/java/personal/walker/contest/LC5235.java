@@ -17,7 +17,7 @@ public class LC5235 implements Solution {
      * @return
      */
     public List<List<Integer>> findWinners(int[][] matches) {
-         List<Integer> allWinner = new ArrayList<>();
+        List<Integer> allWinner = new ArrayList<>();
         List<Integer> loseOne = new ArrayList<>();
         // TODO : make this as lambda.
         Map<Integer,List<Integer>> winner2Losers = new HashMap<>();

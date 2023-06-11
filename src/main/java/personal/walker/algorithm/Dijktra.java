@@ -62,13 +62,13 @@ public class Dijktra {
     }
 
     public double dijkstra(int n, List<List<Edge>> graph, int start, int end) {
-        // 第一步将所有的
+        // First, init all distance from start as infinite large
         int[] dist = new int[n];
-        // 初始化为最大
         Arrays.fill(dist, 1 << 31 - 1);
-        // 自己到自己肯定是0
+
+        // From own node to its own, distance is zero
         dist[start] = 0;
-        // 以distance 为比较的优先队列
+        // Make a heap, to compare and pop out the shortest distance....
         PriorityQueue<Node> pq = new PriorityQueue<>(2 * n,Comparator.comparingInt(node -> node.distance));
         // Array used to track which nodes have already been visited.
         boolean[] visited = new boolean[n];
@@ -78,20 +78,18 @@ public class Dijktra {
             visited[node.id] = true;
 
             // We already found a better path before we got to
-            // processing this node so we can ignore it.
+            // processing this node, so we can ignore it.
             if (dist[node.id] < node.distance) continue;
 
             List<Edge> edges = graph.get(node.id);
-            for (int i = 0; i < edges.size(); i++) {
-                Edge edge = edges.get(i);
-
+            for (Edge edge : edges) {
                 // You cannot get a shorter path by revisiting a node you have already visited before.
                 if (visited[edge.to]) continue;
 
                 // Relax edge by updating minimum cost if applicable.
                 int newDist = dist[edge.from] + edge.cost;
                 if (newDist < dist[edge.to]) {
-                //    prev[edge.to] = edge.from;
+                    //    prev[edge.to] = edge.from;
                     dist[edge.to] = newDist;
                     pq.offer(new Node(edge.to, dist[edge.to]));
                 }
